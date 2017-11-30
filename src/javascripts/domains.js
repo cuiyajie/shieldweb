@@ -13,7 +13,7 @@ export default {
 
   prod: {
     domain: prodDomain,
-    proxy: `http://${prodDomain}:8090`,
+    proxy: ``,
     cloud: `http://${prodCloud}`
   }
 }

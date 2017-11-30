@@ -9,8 +9,10 @@ var path = require('path')
 var domains = require('./domains.js')
 var listener = require('./proxy.js')
 
-var REMOTE_SERVER = process.env.NODE_ENV === 'prod' ? domains.prod.cloud : domains.stg.cloud; 
-var LOCAL_PORT = 8090
+// var REMOTE_SERVER = process.env.NODE_ENV === 'prod' ? domains.prod.cloud : domains.stg.cloud; 
+
+var REMOTE_SERVER = domains.prod.cloud 
+var LOCAL_PORT = 8081
 // var HTTPS_LOCAL_PORT = 8443
 var index = 1;
 
@@ -20,7 +22,7 @@ process.argv.forEach((argv, i) => {
   }
 });
 
-var proxyHost = process.argv[index + 1] || 'localhost';
+var proxyHost = process.argv[index + 1] || '0.0.0.0';
 var AllowedOrigins = process.argv.slice(index + 2);
 
 console.log('Proxy server start on:' + proxyHost + ':' + LOCAL_PORT + ' ..... ');

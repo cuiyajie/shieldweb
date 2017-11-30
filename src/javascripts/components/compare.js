@@ -11,7 +11,8 @@ import domains from '../domains';
 import Platform from './platform';
 
 
-const isProd = window.location.host.indexOf(domains.prod.domain) !== -1;
+// const isProd = window.location.host.indexOf(domains.prod.domain) !== -1;
+const isProd = true
 const host = isProd ? domains.prod.proxy : domains.stg.proxy;
 const livenessConfig = { debug: !isProd, host };
 const config = new Config(); 
