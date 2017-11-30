@@ -1,0 +1,241 @@
+#loading {
+  background: radial-gradient(ellipse at center,  rgba(43,43,43,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+
+  .centered {
+    font-size: 14px;
+    width: 240px;
+    margin-top: -30px;
+  }
+
+  .loader {
+    margin-top: 30px;
+  }
+}
+
+#invitation {
+  padding-top: 60px;
+
+  input {
+    color: #6F6F6F;
+    background-color: #161616;
+    box-shadow: 0 -1px 0 rgba(161, 161, 161, .19) inset;
+  }
+
+  .contact {
+    position: relative;
+    text-align: center;
+    margin-top: 35px;
+    color: #6F6F6F;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0;
+      background-color: #161616;
+      box-shadow: 0 1px 0 rgba(62, 62, 62, .5);
+    }
+
+    a {
+      display: inline-block;
+      color: #6F6F6F;
+      padding-top: 30px;
+    }
+  }
+
+  .seperator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2B2B2B;
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+}
+
+#comparision {
+  color: #666;
+
+  .compare-block {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    &:before {
+      content: '';
+      padding-top: 62.7%;
+      display: block;
+    }
+
+    &.bordered {
+      cursor: pointer;
+      border: 2px dashed #979797;
+    }
+    
+    &.darkbg {
+      background-color: #252525;
+    }
+
+    &.image {
+      clip-path: inset(0 0 0 0 round 8px);
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: auto;
+        width: 100%;
+        transform: translateY(-50%);
+        transform-origin: 50% 50%;
+
+        &.cw90 {
+          transform: translateY(-50%) rotate(90deg);
+        }
+
+        &.cw180 {
+          transform: translateY(-50%) rotate(180deg);
+        }
+
+        &.cw270 {
+          transform: translateY(-50%) rotate(270deg);
+        }
+      }
+    }
+
+    .icon {
+      font-size: 60px;
+    }
+
+    &.input {
+      .centered {
+        width: 100%;
+        padding: 0 12px;
+      }
+
+      input {
+        background-color: #424242;
+        color: #FFF;
+      }
+
+      input::-webkit-input-placeholder,
+      input::-moz-input-placeholder,
+      input:-ms-input-placeholder,
+      input:-moz-input-placeholder {
+        color: #666;
+      }
+    }
+
+    &.result {
+
+      .result-image {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        clip-path: inset(0 0 0 0 round 8px);
+
+        &:before {
+          content: '';
+          padding-top: 100%;
+          display: block;
+        }
+
+        img { border-radius: 8px; }
+
+        &.center img {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &.middle img {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .result-text {
+        color: #FFF;
+        font-size: 12px;
+        position: relative;
+        height: 100%;
+
+        &.single {
+          .icon { font-size: 2.5em; }
+          .text { margin-top: 1.25em; }
+        }
+
+        &.double {
+          .icon { font-size: 2em; }
+          .text { margin-top: 0.625em; }
+        }
+        
+        .icon.second { margin-top: 1.25em; }
+      }
+    }
+  }
+}
+
+#comparing {
+  background-color: #373737;
+
+  img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+#result {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  .circle-result {
+    margin: 0 auto;
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #FFF;
+    position: relative;
+  }
+  
+  .label {
+    background-color: #000;
+    border-radius: 23px;
+    line-height: 46px;
+    text-align: center;
+
+    &.success {
+      color: #63FF8D;
+    }
+
+    &.fail {
+      color: #FF6441;
+    }
+  }
+
+  .text-container {
+    .title {
+      font-size: 18px;
+    }
+    .percent {
+      font-size: 90px; 
+    }
+    .unit {
+      font-size: 22px;
+    }
+  }
+
+  .canvas-container {
+    width: 230px;
+    height: 230px;
+  }
+}

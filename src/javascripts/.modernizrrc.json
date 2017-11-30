@@ -1,0 +1,19 @@
+{
+	"minify": false,
+	"options": [
+		"html5shiv",
+		"domprefixes",
+		"setClasses",
+		"load",
+		"prefixed",
+		"prefixes",
+		"teststyles",
+		"testprop",
+		"testallprops"
+	],
+	"feature-detects": [
+		"css/animations",
+		"css/transitions",
+		"touchevents"
+	]
+}

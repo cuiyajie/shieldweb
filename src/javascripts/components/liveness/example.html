@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/liveness.css" rel="stylesheet">
+  </head>
+  <body>
+  <script src="liveness.min.js"></script>
+  <script>
+    var livenessEnum = {
+      BLINK: 0,
+      MOUTH: 1,
+      YAW: 2
+    };
+    //指定动作活体检测
+    var liveness = new Liveness({
+      host: '',
+      onChecked: function(data) {
+        console.log(data);
+      },
+      action: livenessEnum.MOUTH,
+    });
+    //静默活体检测
+    var silentLiveness = new Liveness({
+      host: '',
+      onChecked: function(data) {
+        console.log(data);
+      },
+      silent: true,
+      silentBase64: true
+    })
+    liveness.show();
+  </script>
+  </body>
+</html>

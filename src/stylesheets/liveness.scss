@@ -1,0 +1,162 @@
+$linkface: #FF8030;
+
+.liveness-modal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 100;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .95),
+                0 1px 0 rgba(81, 81, 81, .5) inset;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    display: block;
+    &.hide {
+      display: none;
+    }
+  }
+
+  .gif-container img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.liveness-modal {
+  max-width: 335px;
+  width: 90%;
+  min-height: 400px;
+
+  .modal-body {
+    position: relative;
+    padding: 40px 15px 20px;
+  }
+
+  .sample,
+  .sample-inner {
+    position: relative;
+    height: 200px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #D8D8D8;
+      border-width: 3px;
+    }
+  }
+  
+  .gif-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .sample {
+    width: 200px;
+    margin: 0 auto 20px;
+  }
+
+  .sample:before {
+    top: 0;
+    left: 0;
+    border-top-style: solid;
+    border-left-style: solid;
+  }
+
+  .sample:after {
+    top: 0;
+    right: 0;
+    border-top-style: solid;
+    border-right-style: solid;
+  }
+
+  .sample-inner:before {
+    bottom: 0;
+    left: 0;
+    border-bottom-style: solid;
+    border-left-style: solid;
+  }
+
+  .sample-inner:after {
+    bottom: 0;
+    right: 0;
+    border-bottom-style: solid;
+    border-right-style: solid;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+    line-height: 150%;
+
+    em {
+      font-style: normal;
+      color: $linkface;
+    }
+    
+    span.justify {
+      letter-spacing: 0.24em;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: #424242;
+    color: rgba(255, 255, 255, .5);
+    font-size: inherit;
+
+    &.enabled {
+      background-color: $linkface;
+      color: #FFF;
+    }
+  }
+
+  input.upload-input {
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+.loading-modal {
+  display: none;
+
+  .modal-body {
+    padding: 40px;
+  }
+
+  .gif-container {
+    width: 75px;
+    height: 80px;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}

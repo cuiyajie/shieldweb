@@ -1,0 +1,87 @@
+<section id="comparision" tabbed class="page">
+  <!-- <div class="tabbed-header">
+    <div class="container">
+      <div class="clearfix">
+        <div class="column active" data-tab="idcard"><span class="text-wrap">人脸VS身份证</span></div>
+        <div class="column" data-tab="origin"><span class="text-wrap">人脸VS公安网底图</span></div>
+      </div>
+    </div>
+  </div> -->
+  <div class="tabbed-body">
+    <div class="container">
+      <section id="comparedToIdCard" data-tab-target="idcard" class="tabbed-section">
+        <!-- <input type="file" accept="image/*" class="vis-hidden" data-action="idCardUploaded">
+        <div class="compare-block bordered" data-action="uploadIdCard">
+          <div class="centered tx_c">
+            <div class="icon"><i class="icon-idcard"></i></div>
+            <div>1.上传身份证</div>
+          </div>
+        </div> -->
+        <div class="compare-block darkbg image hidden" data-action="uploadIdCard"></div>
+        <input type="file" accept="image/*" class="vis-hidden" data-action="avatarUploaded">
+        <div class="compare-block bordered mt20" data-action="uploadAvatar">
+          <div class="centered tx_c">
+            <div class="icon"><i class="icon-group"></i></div>
+            <div>采集人像</div>
+          </div>
+        </div>
+        <div class="compare-block darkbg result mt20 hidden" data-action="uploadAvatar">
+          <div class="fullfill">
+            <div class="result-image"><img alt="Avatar"></div>
+            <div class="result-text single hidden" font-zoom="12">
+               <div class="centered tx_c full-width">
+                 <div class="icon"><i></i></div>
+                 <div class="text"></div>
+               </div>
+            </div>
+            <div class="result-text double hidden" font-zoom="12">
+               <div class="centered tx_c full-width">
+                 <div class="icon"><i></i></div>
+                 <div class="text"></div>
+                 <div class="icon second"><i></i></div>
+                 <div class="text"></div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <!-- <button type="button" class="primary" data-action="compareImage">开始比对</button> -->
+      </section>
+      <!-- <section id="comparedToOrigin" data-tab-target="origin" class="tabbed-section">
+        <div class="compare-block darkbg input">
+          <div class="centered">
+            <div class="tx_c">1.采集信息</div>
+            <div class="input-container mt15"><input id="name" type="text" class="tx_c" placeholder="请输入姓名"></div>
+            <div class="input-container mt15"><input id="idcard" type="text" class="tx_c" placeholder="请输入身份证号"></div>
+          </div>
+        </div>
+        <input type="file" accept="image/*" class="hidden" data-action="avatarUploaded">
+        <div class="compare-block bordered mt20" data-action="uploadAvatar">
+          <div class="centered tx_c">
+            <div class="icon"><i class="icon-group"></i></div>
+            <div>2.采集人像</div>
+          </div>
+        </div>
+        <div class="compare-block darkbg result mt20 hidden" data-action="uploadAvatar">
+          <div class="fullfill">
+            <div class="result-image"><img alt="Avatar"></div>
+            <div class="result-text single hidden" font-zoom="12">
+               <div class="centered tx_c full-width">
+                 <div class="icon"><i></i></div>
+                 <div class="text"></div>
+               </div>
+            </div>
+            <div class="result-text double hidden" font-zoom="12">
+               <div class="centered tx_c full-width">
+                 <div class="icon"><i></i></div>
+                 <div class="text"></div>
+                 <div class="icon second"><i></i></div>
+                 <div class="text"></div>
+               </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <button type="button" class="primary" data-action="compareIdInfo">开始比对</button> -->
+      </section>
+    </div>
+  </div>
+</section>

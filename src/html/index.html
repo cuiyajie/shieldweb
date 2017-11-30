@@ -1,0 +1,17 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <div id="app" class="app" data-module="demo">
+    {% include 'pages/loading.html' %}
+    {% include 'pages/invitation.html' %}
+    {% include 'pages/comparision.html' %}
+    {% include 'pages/comparing.html' %}
+    {% include 'pages/result.html' %}
+  </div>
+{% endblock %}

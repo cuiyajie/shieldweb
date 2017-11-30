@@ -1,0 +1,92 @@
+#app.blur {
+  filter: blur(2px);
+}
+
+.message-modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, .08);
+}
+
+.message-modal-body {
+  background-color: #FFF;
+  border-radius: 12px;
+  color: #333;
+  font-size: 14px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  &.list {
+    text-align: center;
+    width: 90%;
+    width: calc(100% - 10px);
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &.error {
+    text-align: center;
+    min-width: 200px;
+
+    li {
+      padding: 20px;
+    }
+
+    .icon {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  li.confirm {
+    padding: 10px 0;
+
+    a {
+      text-decoration: none;
+      color: #0076FF;
+      display: block;
+    }
+  }
+
+  li {
+    padding: 15px 0;
+
+    & + li {
+      border-top: 1px solid #979797; 
+    }
+  }
+
+  li .icon-li {
+    text-align: left;
+    position: relative;
+    padding: 0 20px;
+
+    [class^="icon-"] {
+      font-size: 20px;
+      margin-right: 15px;
+
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    span {
+      margin-left: 30px;
+    }
+
+    .icon-camera {
+      font-size: 16px;
+      margin-top: -8px;
+    }
+  }
+}

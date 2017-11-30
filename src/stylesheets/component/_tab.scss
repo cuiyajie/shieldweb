@@ -1,0 +1,50 @@
+.tabbed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 14px;
+  height: 48px;
+  text-align: center;
+  background-color: #2B2B2B;
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+
+    span {
+      display: inline-block;
+      padding: 0 10px;
+      line-height: 46px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    &.active span {
+      color: $linkface;
+      border-bottom: 2px solid $linkface;
+    }
+  }
+}
+
+.tabbed-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #373737;
+  padding-top: 48px;
+  overflow-y: auto;
+}
+
+.tabbed-section {
+  padding: 20px 0;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
