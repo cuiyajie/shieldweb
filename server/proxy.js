@@ -48,7 +48,7 @@ proxy.on('proxyReq', function(proxyReq, req, res) {
   console.log(formatLog(proxyReq))
   const uri = URL.parse(proxyReq.path)
   // const path = `${uri.pathname}?api_id=${API_ID}&api_secret=${API_SECRET}`
-  const path = url.pathname
+  const path = uri.pathname
 
   if (proxyReq.method === 'GET' || (proxyReq.method === 'POST' && allowPostPath.indexOf(uri.pathname) !== -1)) {
     proxyReq.path = path
