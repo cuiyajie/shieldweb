@@ -12,7 +12,7 @@ function getPublicCloud(debug) {
 export default class Config {
   
   constructor(options) {
-    if (options.host) {
+    if (options.host != null) {
       this.host = options.host;
       this.auth = '';
     } else if (options.apiId && options.apiSecret) {
