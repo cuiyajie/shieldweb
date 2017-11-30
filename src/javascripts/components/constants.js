@@ -5,7 +5,7 @@ export const livenessEnum = {
   // NOD: 3
 };
 
-export const HACK_SCORE_MAX = 0.98;
+export const HACK_SCORE_MAX = 0.99;
 
 export const livenessAssets = {
   [livenessEnum.BLINK]: {
